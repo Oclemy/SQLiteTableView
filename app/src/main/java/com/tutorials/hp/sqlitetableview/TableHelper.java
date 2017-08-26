@@ -14,27 +14,27 @@ import de.codecrafters.tableview.toolkit.SimpleTableDataAdapter;
 import de.codecrafters.tableview.toolkit.SimpleTableHeaderAdapter;
 
 /**
- * Created by Oclemy on 12/1/2016 for ProgrammingWizards Channel and http://www.camposha.com.
+ * TABLE HELPER CLASS. GETS ARRAYLIST FROM SQLITE DATABASE AND RETURNS A MULTIDIMENSIONAL ARRAY FOR BINDING TO OUR ADAPTER
  */
 public class TableHelper {
 
-
-
+    //DECLARATIONS
     Context c;
-
     private String[] spaceProbeHeaders={"Name","Propellant","Destination"};
     private String[][] spaceProbes;
 
+    //CONSTRUCTOR
     public TableHelper(Context c) {
         this.c = c;
     }
 
+    //RETURN TABLE HEADERS
     public String[] getSpaceProbeHeaders()
     {
         return spaceProbeHeaders;
     }
 
-
+    //RETURN TABLE ROWS
     public  String[][] getSpaceProbes()
     {
         ArrayList<Spacecraft> spacecrafts=new DBAdapter(c).retrieveSpacecrafts();
