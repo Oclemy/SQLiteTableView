@@ -1,10 +1,11 @@
 # Android SQLite TableView
 
 
-How to save,retrieve and bind SQLite database data to a TableView.Visit http://camposha.info for more.
+How to save,retrieve and bind SQLite database data to a TableView.
+The full tutorial for this example is located at http://camposha.info/source/android-sqlite-tableview-insertselectshow.
 
 ## Overview
-- Insert to SQLite
+- Insert to SQLite database.
 - Retrieve from SQLite
 - Bind to TableView
 
@@ -32,7 +33,5 @@ How to save,retrieve and bind SQLite database data to a TableView.Visit http://c
 Clone the project into your android studio or download and extract the project and import to your android studio.
 
 ## More
-Visit http://camposha.info for more examples like these.
+Here are more SQLite examples http://camposha.info/tag/android-sqlite/ and TableView Examples here http://camposha.info/tag/android-tableview/ .
 
-Author :
-Oclemy,cheers. http://camposha.info
