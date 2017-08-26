@@ -6,14 +6,19 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 /**
- * Created by Oclemy on 9/27/2016 for ProgrammingWizards Channel and http://www.camposha.info.
+ * - Created by Oclemy on for ProgrammingWizards Channel and http://www.camposha.info.
+ * - DATABASE HELPER CLASS.
+ * - EXTENDS SQLITE OPEN HELPER CLASS.
  */
 public class DBHelper extends SQLiteOpenHelper {
     public DBHelper(Context context) {
         super(context, Constants.DB_NAME, null, Constants.DB_VERSION);
     }
+
     /*
-    CREATE TABLE
+    1.RESPONSIBILITY: CREATES TABLE
+    2. WE PASS SQLITEDATABASE AS A PARAMETER.
+    3. WE DO IT INSIDE TRY CATCH BLOCK TO CATCH ANY ERRORS.
      */
     @Override
     public void onCreate(SQLiteDatabase db) {
@@ -26,14 +31,15 @@ public class DBHelper extends SQLiteOpenHelper {
         }
     }
     /*
-    UPGRADE TABLE
+    1.UPGRADE TABLE
+    2. WE PASS SQLITEDATABASE OBJECT,OLD VERSION AND NEW VERSION NUMBERS AS PARAMETER.
+    3. WE CATCH SQLEXCEPTION ERRORS.
      */
     @Override
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
         try {
             db.execSQL(Constants.DROP_TB);
             db.execSQL(Constants.CREATE_TB);
-
         }catch (SQLException e)
         {
             e.printStackTrace();
