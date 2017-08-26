@@ -14,7 +14,7 @@ import com.tutorials.hp.sqlitetableview.mModel.Spacecraft;
 import java.util.ArrayList;
 
 /**
- * Created by Oclemy on 9/27/2016 for ProgrammingWizards Channel and http://www.camposha.info.
+ * DATABASE ADAPTER CLASS
  */
 public class DBAdapter {
 
